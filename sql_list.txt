@@ -1,0 +1,191 @@
+Case Study - CodeChef Database (Aggregates & Group by)
+All Products
+Easy
+High Price of Products
+Easy
+Average Salary
+Easy
+Locate People
+Easy
+Distinct Companies
+Easy
+Fiction Collection Size
+Easy
+List of Movies with Ratings
+Easy
+Handling NULL Values
+Easy
+Salary of Employees
+Easy
+Department of Each Employee
+Easy
+Article views
+Easy
+Player Performance Insights
+Medium
+Introduction to CodeChef Database
+Easy
+Find the error in Query
+Easy
+Find the output of SQL Query
+Easy
+Return type of count function
+Easy
+Find incorrect queries
+Medium
+Nesting in Aggregate functions
+Easy
+Output of a Query
+Easy
+Choose the correct statements
+Easy
+Count star in NULL columns
+Easy
+Group users
+Easy
+Output all rows from a table
+Easy
+Find average rating among users
+Easy
+Count of users in a range
+Easy
+Find users with maximum rating
+Easy
+Users with rating greater than 2199
+Medium
+Sum of rating with Pro subscription
+Easy
+Count of users in each team
+Medium
+User with highest rating in each College
+Medium
+Ordered list of students in each college
+Medium
+Find team with highest average rating
+Medium
+
+Case Study - ABC Cab booking App (Joins)
+Introduction to cab booking dataset
+Easy
+Figure out the correct Join
+Medium
+Join which returns all rows from both tables
+Medium
+Left join MCQ
+Easy
+User complaints task
+Easy
+Join without a matching column
+Medium
+Find the output for query
+Easy
+Find complaint category
+Medium
+Rearrange the query - 1
+Medium
+Rearrange the query - 2
+Easy
+Combine two tables
+Easy
+Full join on driver data
+Medium
+SQL Cross Join City Partnerships
+Easy
+SQL Cross Join Market Analysis
+Easy
+SQL Retrieval for Specific User
+Medium
+Analyze Resolved Cab Complaints SQL
+Medium
+SQL JOINs Cab Complaints Report
+Medium
+Identify Complaint-Free Users SQL Challenge
+Medium
+Analyze User Complaints with SQL
+Medium
+Explore City-Driver Distribution SQL
+Medium
+
+Case Study - Happy Haven House Rental App (Sub-queries)
+Introduction to Rental App
+Medium
+Purpose of a subquery
+Easy
+Typical use of Sub-query
+Medium
+Sub-query which executes only once
+Medium
+Matching subquery result with a column
+Medium
+Reference columns from outer query
+Medium
+Maximum nesting of subqueries
+Hard
+Invalid user case for subqueries
+Medium
+Rearrange query - 1
+Medium
+Rearrange query - 2
+Medium
+Analyze Multilocation User Reviews SQL
+Medium
+Identify Frequent Users with Bookings
+Medium
+Advanced SQL Subquery Rating Filter
+Medium
+Analyze Above Average Property Ratings
+Medium
+Max User Favorites SQL Challenge
+Medium
+SQL Query Filter Properties Amenities
+Medium
+Top Canadian Properties SQL Challenge
+Medium
+Filter Properties by Amenities Count
+Hard
+Advanced SQL Subquery Favorites Filter
+Medium
+Farmhouse Booking Analysis September SQL challenge
+Medium
+
+Case Study - Library Management System (CASE Expressions)
+Library Management System
+Medium
+Purpose of ELSE in Case When
+Easy
+Syntax for using Case When in SQL
+Easy
+Case When with multiple conditions
+Medium
+Output of a SQL query
+Medium
+Output of Case When - 2
+Easy
+Output of Case When - 3
+Easy
+Output of Case When - 4
+Easy
+Output of Case When - 5
+Easy
+Output of Case When - 6
+Easy
+SQL Case Conditional Library Query
+Easy
+SQL Case Condition Library Query - 2
+Easy
+Analyzing Book Genre Availability SQL
+Medium
+Analyzing Library Borrowing Patterns
+Medium
+Analyze Library Books by Year
+Medium
+SQL Library Membership Classification
+Medium
+Library Reservation Hold Duration SQL
+Medium
+SQL Library Loan Limit Query
+Medium
+Library Management SQL Analysis
+Medium
+Library Genre Borrowing Analysis
+Medium

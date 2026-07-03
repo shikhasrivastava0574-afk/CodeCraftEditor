@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeCraft Editor - Personal Coding Practice Room</title>
+  <!-- Custom CSS Design System -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Navbar Header -->
+    <header class="navbar">
+      <div class="logo-section" id="nav-logo">
+        <div class="logo-icon">
+          <i data-lucide="terminal" class="w-5 h-5"></i>
+        </div>
+        <span class="logo-text">CodeCraft Editor</span>
+      </div>
+
+      <div class="nav-links" id="main-navigation-tabs" style="display: none;">
+        <button class="nav-btn active" id="nav-tab-practice">
+          <i data-lucide="layout-dashboard" class="w-4 h-4"></i>Practice
+        </button>
+        <button class="nav-btn" id="nav-tab-subjects">
+          <i data-lucide="book-open" class="w-4 h-4"></i>Core Subjects
+        </button>
+        <button class="nav-btn" id="nav-tab-notes">
+          <i data-lucide="file-text" class="w-4 h-4"></i>My Notes
+        </button>
+      </div>
+
+      <div class="nav-actions">
+        <button class="add-question-btn primary" id="btn-add-question">
+          <i data-lucide="plus" class="w-4 h-4"></i>Add Custom Question
+        </button>
+        <button class="user-profile-btn" id="btn-user-profile" style="display: none; align-items: center; gap: 8px;" title="Logout">
+          <i data-lucide="log-out" class="w-4 h-4"></i>
+          <span id="user-display-name">Username</span>
+          <span id="user-rank-badge" style="font-size: 10px; background: var(--brand-color-glow); color: var(--brand-color-hover); padding: 2px 8px; border-radius: 20px; font-weight: 700; border: 1px solid var(--brand-color-hover); text-transform: uppercase; letter-spacing: 0.5px;">Newbie</span>
+        </button>
+        <select id="theme-selector" class="editor-select" style="height: 38px; width: 150px; font-weight: 500;" title="Select Theme">
+          <option value="dark">🌑 Obsidian Dark</option>
+          <option value="light">☀️ Obsidian Light</option>
+          <option value="monokai">🎨 Monokai Retro</option>
+          <option value="cyberpunk">⚡ Cyberpunk 2077</option>
+          <option value="forest">🌲 Forest Moss</option>
+        </select>
+      </div>
+    </header>
+
+    <!-- Dashboard View -->
+    <main class="dashboard-view" id="dashboard-view">
+      <div id="practice-container">
+      <!-- Welcome Greeting -->
+      <h2 id="dashboard-greeting" style="font-size: 24px; font-weight: 700; margin-bottom: 24px; letter-spacing: -0.5px; background: linear-gradient(to right, var(--text-primary), var(--brand-color-hover)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Welcome back, Coder!</h2>
+      <!-- Quick Reference Panel -->
+      <div class="reference-panel" id="reference-panel">
+        <button class="reference-header" id="btn-toggle-ref">
+          <span style="display: flex; align-items: center; gap: 10px; font-weight: 600;">
+            <i data-lucide="book-open" class="w-4 h-4 text-brand"></i>
+            💡 Quick Syntax Cheatsheet & Notes
+          </span>
+          <i data-lucide="chevron-down" class="w-4 h-4 ref-arrow" id="ref-arrow"></i>
+        </button>
+        
+        <div class="reference-body" id="reference-body" style="display: none;">
+          <div class="reference-tabs">
+            <button type="button" class="ref-tab active" data-ref-lang="js">JavaScript</button>
+            <button type="button" class="ref-tab" data-ref-lang="py">Python</button>
+            <button type="button" class="ref-tab" data-ref-lang="cpp">C++</button>
+            <button type="button" class="ref-tab" data-ref-lang="java">Java</button>
+            <button type="button" class="ref-tab" data-ref-lang="sql">SQL</button>
+          </div>
+          <div class="reference-content" id="reference-content">
+            <!-- Loaded dynamically in JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Welcome Stats -->
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-label">Total Solved</span>
+            <span class="stat-value" id="stat-total-val">0/0</span>
+          </div>
+        </div>
+        <div class="stat-card success">
+          <div class="stat-icon">
+            <i data-lucide="circle-dot-dashing" class="w-6 h-6"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-label">Easy Solved</span>
+            <span class="stat-value" id="stat-easy-val">0/0</span>
+          </div>
+        </div>
+        <div class="stat-card warning">
+          <div class="stat-icon">
+            <i data-lucide="zap" class="w-6 h-6"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-label">Medium Solved</span>
+            <span class="stat-value" id="stat-medium-val">0/0</span>
+          </div>
+        </div>
+        <div class="stat-card danger">
+          <div class="stat-icon">
+            <i data-lucide="flame" class="w-6 h-6"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-label">Hard Solved</span>
+            <span class="stat-value" id="stat-hard-val">0/0</span>
+          </div>
+        </div>
+        <div class="stat-card" style="border-left: 4px solid var(--brand-color-hover);">
+          <div class="stat-icon" style="background: var(--brand-color-glow); color: var(--brand-color-hover);">
+            <i data-lucide="shield" class="w-6 h-6"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-label">Global Rank</span>
+            <span class="stat-value" id="stat-rank-val" style="font-size: 16px; font-weight: 700; color: var(--brand-color-hover); text-transform: uppercase;">Newbie</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Search & Filters -->
+      <section class="filter-bar">
+        <div class="search-wrapper">
+          <i data-lucide="search" class="search-icon w-4 h-4"></i>
+          <input type="text" id="search-input" class="search-input" placeholder="Search by problem title, category...">
+        </div>
+        
+        <select id="filter-difficulty" class="filter-select">
+          <option value="all">All Difficulties</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+
+        <select id="filter-category" class="filter-select">
+          <option value="all">All Categories</option>
+        </select>
+
+        <select id="filter-status" class="filter-select">
+          <option value="all">All Statuses</option>
+          <option value="solved">Solved</option>
+          <option value="attempted">Attempted</option>
+          <option value="todo">Todo</option>
+        </select>
+      </section>
+
+      <!-- Question List Table -->
+      <section class="table-container">
+        <table class="question-table">
+          <thead>
+            <tr>
+              <th class="col-status">Status</th>
+              <th class="col-title">Title</th>
+              <th class="col-category">Category</th>
+              <th class="col-difficulty">Difficulty</th>
+              <th class="col-action">Action</th>
+            </tr>
+          </thead>
+          <tbody id="question-list-body">
+            <!-- Rendered dynamically in JS -->
+          </tbody>
+        </table>
+      </section>
+      </div> <!-- End practice-container -->
+
+      <!-- Core Subjects Container -->
+      <div id="subjects-container" style="display: none;">
+        <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 24px; letter-spacing: -0.5px; background: linear-gradient(to right, var(--text-primary), var(--brand-color-hover)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          CS Core Subjects Reference
+        </h2>
+        <div class="subjects-layout" style="display: grid; grid-template-columns: 280px 1fr; gap: 24px;">
+          <!-- Left: List of Subjects & Topics -->
+          <div class="subjects-sidebar" style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; height: 600px; display: flex; flex-direction: column; gap: 16px;">
+            <h3 style="font-size: 14px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px;">Subjects</h3>
+            <div class="subject-select-list" id="subject-select-list" style="display: flex; flex-direction: column; gap: 6px;">
+              <!-- Dynamic subjects buttons -->
+            </div>
+            
+            <h3 style="font-size: 14px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 12px;">Topics</h3>
+            <div class="topic-select-list" id="topic-select-list" style="display: flex; flex-direction: column; gap: 6px; overflow-y: auto; flex: 1;">
+              <!-- Dynamic topic buttons -->
+            </div>
+          </div>
+          
+          <!-- Right: Subject Topic Reader -->
+          <div class="subjects-reader" style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 32px; height: 600px; overflow-y: auto; display: flex; flex-direction: column; gap: 20px;">
+            <div id="subject-reader-title-area">
+              <span id="subject-reader-subject-badge" style="font-size: 11px; background: var(--brand-color-glow); color: var(--brand-color-hover); padding: 4px 10px; border-radius: 20px; font-weight: 600;">OOPS</span>
+              <h2 id="subject-reader-topic-title" style="font-size: 26px; font-weight: 800; color: var(--text-primary); margin-top: 8px;">Inheritance & Polymorphism</h2>
+            </div>
+            <div id="subject-reader-content" class="markdown-body" style="font-size: 15px; color: var(--text-primary); line-height: 1.7;">
+              <!-- Renders markdown/html notes -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- My Notes Container -->
+      <div id="notes-container" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+          <h2 style="font-size: 24px; font-weight: 700; letter-spacing: -0.5px; background: linear-gradient(to right, var(--text-primary), var(--brand-color-hover)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0;">
+            My Personal Study Notes
+          </h2>
+          <button class="action-btn success" id="btn-add-note" style="background: var(--success); color: white; border: none; height: 38px; padding: 0 16px;">
+            <i data-lucide="plus" class="w-4 h-4"></i>Create Note
+          </button>
+        </div>
+        
+        <div class="notes-layout" style="display: grid; grid-template-columns: 300px 1fr; gap: 24px;">
+          <!-- Left Notes List -->
+          <div class="notes-sidebar" style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; height: 600px; display: flex; flex-direction: column; gap: 16px;">
+            <h3 style="font-size: 14px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px;">All Notes</h3>
+            <div class="notes-list" id="notes-list" style="display: flex; flex-direction: column; gap: 8px; overflow-y: auto; flex: 1;">
+              <!-- Dynamic list of user notes -->
+            </div>
+          </div>
+          
+          <!-- Right Note Editor / View -->
+          <div class="notes-editor-panel" id="notes-editor-panel" style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; height: 600px; display: flex; flex-direction: column; gap: 16px;">
+            <!-- If no note selected -->
+            <div id="notes-empty-state" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: var(--text-secondary); text-align: center; gap: 12px;">
+              <i data-lucide="file-text" class="w-12 h-12" style="stroke-width: 1.2; color: var(--brand-color-hover);"></i>
+              <div>
+                <h4 style="font-weight: 600; color: var(--text-primary); margin-bottom: 4px;">No Note Selected</h4>
+                <p style="font-size: 13px;">Create a new note or select an existing one to begin writing.</p>
+              </div>
+            </div>
+            
+            <!-- Note Editor Form (hidden by default) -->
+            <div id="notes-active-form" style="display: none; flex-direction: column; gap: 16px; height: 100%;">
+              <div style="display: flex; gap: 12px; align-items: center;">
+                <input type="text" id="note-title-input" class="form-input" placeholder="Note Title" style="flex: 1; font-size: 18px; font-weight: 700; height: 42px;">
+                <button class="action-btn success" id="btn-save-note" style="height: 42px; background: var(--success); color: white; border: none; padding: 0 16px;">
+                  <i data-lucide="save" class="w-4 h-4"></i>Save
+                </button>
+                <button class="action-btn danger" id="btn-delete-note" style="height: 42px; background: var(--danger); color: white; border: none; padding: 0 16px;">
+                  <i data-lucide="trash-2" class="w-4 h-4"></i>Delete
+                </button>
+              </div>
+              <textarea id="note-body-input" class="form-input" placeholder="Write your notes here... Supports plain text study guides." style="flex: 1; resize: none; font-family: inherit; font-size: 14px; line-height: 1.6; padding: 16px;"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Workspace View -->
+    <main class="workspace-view" id="workspace-view" style="display: none;">
+      <!-- Left Pane: Problem Description -->
+      <section class="workspace-pane pane-left">
+        <div class="pane-header">
+          <span class="pane-title">
+            <i data-lucide="book-open" class="w-4 h-4"></i>
+            <span id="workspace-title">Problem Title</span>
+          </span>
+          <div class="pane-tabs">
+            <button class="pane-tab active" id="tab-desc" onclick="switchLeftTab('description')">Description</button>
+            <button class="pane-tab" id="tab-hints" onclick="switchLeftTab('hints')">Hints</button>
+          </div>
+        </div>
+        <div class="pane-content" id="workspace-left-content">
+          <!-- Description & constraints rendered in JS -->
+        </div>
+      </section>
+
+      <!-- Right Pane: Code Editor + Output Console -->
+      <section class="workspace-pane pane-right">
+        <!-- Editor Header controls -->
+        <div class="editor-controls">
+          <div class="control-group">
+            <i data-lucide="code-2" class="w-4 h-4" style="color: var(--brand-color-hover);"></i>
+            <select id="editor-lang-select" class="editor-select">
+              <option value="javascript">JavaScript</option>
+              <option value="python">Python</option>
+              <option value="cpp">C++</option>
+              <option value="java">Java</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <span style="font-size: 12px; color: var(--text-secondary);">Font Size</span>
+            <input type="range" id="font-size-slider" min="12" max="22" value="14" step="1" style="width: 80px; cursor: pointer;">
+            <span id="font-size-label" style="font-size: 13px; font-weight:600; width: 35px;">14px</span>
+            <button class="btn-icon" id="btn-reset-code" title="Reset default starter template">
+              <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Monaco Editor Core -->
+        <div class="editor-wrapper">
+          <div id="editor-container" class="monaco-container">
+            <!-- Monaco renders here -->
+          </div>
+        </div>
+
+        <!-- Bottom Execution Console -->
+        <div class="pane-bottom" id="pane-bottom">
+          <div class="pane-header">
+            <span class="pane-title">
+              <i data-lucide="terminal" class="w-4 h-4"></i>
+              <span id="console-header-label">Console & Run Results</span>
+            </span>
+            <div class="console-actions">
+              <button class="action-btn primary" id="btn-run-code">
+                <i data-lucide="play" class="w-4 h-4"></i>Run Code
+              </button>
+              <button class="action-btn success" id="btn-submit-code" style="background: var(--success); color: white; border: none;">
+                <i data-lucide="send" class="w-4 h-4"></i>Submit
+              </button>
+            </div>
+          </div>
+          <!-- Test case outcome banner -->
+          <div class="test-summary" id="result-summary-banner" style="display: none;">
+            <i data-lucide="check-check" class="w-5 h-5"></i><span>All Test Cases Passed!</span>
+          </div>
+          <!-- Console details contents -->
+          <div class="console-content">
+            <div class="testcases-list" id="console-tabs-list">
+              <!-- Case tabs loaded dynamically -->
+            </div>
+            <div class="testcase-details" id="console-case-details" style="flex:1;">
+              <!-- Details loaded dynamically -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- Custom Question Creator Modal -->
+  <div class="modal-overlay" id="modal-add-question">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h2 class="modal-title">Create Custom Question</h2>
+        <button class="btn-icon" id="btn-close-modal"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+      <form id="custom-question-form">
+        <div class="modal-body">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q-title">Question Title</label>
+              <input type="text" id="q-title" class="form-input" placeholder="e.g. FizzBuzz" required>
+            </div>
+            <div class="form-group">
+              <label for="q-category">Category</label>
+              <input type="text" id="q-category" class="form-input" placeholder="e.g. Math, Strings" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q-difficulty">Difficulty</label>
+              <select id="q-difficulty" class="form-input" style="height: 42px;">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="q-function-name">Function / Handler Name</label>
+              <input type="text" id="q-function-name" class="form-input" placeholder="e.g. fizzBuzz" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="q-description">Problem Description (Supports Markdown)</label>
+            <textarea id="q-description" class="form-input form-textarea" placeholder="Provide the description of the challenge..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="q-testcases">Test Cases (JSON Format)</label>
+            <textarea id="q-testcases" class="form-input form-textarea" style="min-height: 120px; font-family: monospace; font-size: 13px;" placeholder='[&#10;  { "input": [15], "expected": ["1","2","Fizz","4","Buzz"] }&#10;]' required></textarea>
+            <span style="font-size:11px; color: var(--text-tertiary);">Must be a JSON Array where each object has "input" (Array of arguments) and "expected" properties.</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="action-btn" id="btn-cancel-modal">Cancel</button>
+          <button type="submit" class="action-btn primary">Create Question</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- User Authentication Overlay -->
+  <div class="auth-overlay" id="auth-overlay">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <div class="logo-icon">
+          <i data-lucide="terminal" class="w-5 h-5"></i>
+        </div>
+        <span class="logo-text">CodeCraft Editor</span>
+      </div>
+      <div class="auth-header">
+        <h2 class="auth-title" id="auth-title">Welcome Back</h2>
+        <p class="auth-subtitle" id="auth-subtitle">Login to access your personal coding practice room</p>
+      </div>
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="auth-tab-login">Login</button>
+        <button class="auth-tab" id="auth-tab-signup">Sign Up</button>
+      </div>
+      <form id="auth-form" style="display: flex; flex-direction: column; gap: 16px;">
+        <div class="form-group" id="auth-group-username" style="display: none;">
+          <label for="auth-username">Username</label>
+          <input type="text" id="auth-username" class="form-input" placeholder="e.g. coder123">
+        </div>
+        <div class="form-group">
+          <label for="auth-email">Email Address</label>
+          <input type="email" id="auth-email" class="form-input" placeholder="e.g. you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="auth-password">Password</label>
+          <input type="password" id="auth-password" class="form-input" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="action-btn primary" id="auth-submit-btn" style="width: 100%; height: 42px; margin-top: 12px; justify-content: center;">
+          Log In
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Submission Result Modal -->
+  <div class="modal-overlay" id="modal-submit-result">
+    <div class="modal-container" style="max-width: 440px; text-align: center; padding: 40px 24px; display: flex; flex-direction: column; gap: 20px;">
+      <div style="font-size: 64px; color: var(--success); display: flex; align-items: center; justify-content: center;">
+        <i data-lucide="check-circle-2" style="width: 72px; height: 72px; stroke-width: 1.5;"></i>
+      </div>
+      <div>
+        <h2 style="font-size: 26px; font-weight: 800; color: var(--success); margin-bottom: 8px; letter-spacing: -0.5px;">Success: Accepted!</h2>
+        <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.5;">Your solution compiled successfully and passed all system validation test cases.</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 8px 0;">
+        <div style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; text-align: center;">
+          <div style="font-size: 11px; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; margin-bottom: 4px; letter-spacing: 0.5px;">Runtime</div>
+          <div style="font-size: 22px; font-weight: 700; color: var(--text-primary);" id="submit-runtime">12 ms</div>
+          <div style="font-size: 11px; color: var(--success); margin-top: 4px; font-weight: 500;">Beats 95.8% of users</div>
+        </div>
+        <div style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; text-align: center;">
+          <div style="font-size: 11px; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; margin-bottom: 4px; letter-spacing: 0.5px;">Memory</div>
+          <div style="font-size: 22px; font-weight: 700; color: var(--text-primary);" id="submit-memory">41.9 MB</div>
+          <div style="font-size: 11px; color: var(--success); margin-top: 4px; font-weight: 500;">Beats 88.4% of users</div>
+        </div>
+      </div>
+      
+      <button class="action-btn primary" onclick="document.getElementById('modal-submit-result').classList.remove('active')" style="width: 100%; height: 42px; justify-content: center; font-size: 14px; font-weight: 600;">
+        Awesome!
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Alert -->
+  <div class="toast" id="toast-msg">
+    <span class="toast-icon"></span>
+    <span class="toast-text">Message goes here</span>
+  </div>
+
+  <!-- Main JavaScript modules -->
+  <script type="module" src="js/app.js"></script>
+  <script>
+    // Initialize initial Lucide icons on page load
+    window.addEventListener('load', () => {
+      if (window.lucide) window.lucide.createIcons();
+    });
+
+    // Global error boundary catcher to display exceptions in toast alerts
+    window.onerror = function(message, source, lineno, colno, error) {
+      const toast = document.getElementById('toast-msg');
+      if (toast) {
+        toast.className = 'toast active';
+        toast.style.background = 'var(--danger)';
+        toast.querySelector('.toast-text').textContent = 'Error: ' + message;
+        setTimeout(() => toast.classList.remove('active'), 6000);
+      } else {
+        alert('Error: ' + message);
+      }
+      return false;
+    };
+    window.addEventListener('unhandledrejection', function(event) {
+      const toast = document.getElementById('toast-msg');
+      if (toast) {
+        toast.className = 'toast active';
+        toast.style.background = 'var(--danger)';
+        toast.querySelector('.toast-text').textContent = 'Promise: ' + event.reason;
+        setTimeout(() => toast.classList.remove('active'), 6000);
+      } else {
+        alert('Promise Error: ' + event.reason);
+      }
+    });
+  </script>
+</body>
+</html>

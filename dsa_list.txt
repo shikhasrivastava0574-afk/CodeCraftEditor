@@ -1,0 +1,1026 @@
+Arrays (21)
+
+Find Missing and Repeating element
+
+Easy
+
+Stock Buy and Sell – Max one Transaction Allowed
+
+Easy
+
+Remove Duplicates in a Sorted Array
+
+Easy
+
+Convert Array into Zig-Zag fashion
+
+Easy
+
+Find third largest element
+
+Easy
+
+Check Pair Sum in a Sorted and Rotated Array
+
+Medium
+
+Sort an array of 0s, 1s, and 2s
+
+Medium
+
+Rotate Array K times
+
+Medium
+
+Find Majority Element
+
+Medium
+
+Maximum Subarray Sum – Kadane’s Algorithm
+
+Medium
+
+Stock Buy and Sell – Multiple Transaction Allowed
+
+Medium
+
+Next Permutation
+
+Medium
+
+Maximum Product Subarray
+
+Medium
+
+Maximize i*arr[i] among all Rotations of Array
+
+Medium
+
+Rearrange Array in Max Min Form
+
+Medium
+
+Find Smallest Missing Positive Number
+
+Medium
+
+Minimum Jumps to Reach End
+
+Medium
+
+Trapping Rain Water
+
+Hard
+
+Maximum Circular Subarray Sum
+
+Hard
+
+Closest Palindrome Number
+
+Hard
+
+Stock Buy and Sell – Max 2 Transactions Allowed
+
+Hard
+
+Sorting (13)
+
+Maximum Meetings in One Room
+
+Easy
+
+Chocolate Distribution Problem
+
+Easy
+
+Find a Pair with the given difference
+
+Easy
+
+Form the Largest Number
+
+Medium
+
+Merge Two Sorted Arrays Without Extra Space
+
+Medium
+
+Count Inversions of an Array
+
+Medium
+
+Meeting Rooms - II
+
+Medium
+
+Merge Overlapping Intervals
+
+Medium
+
+Minimum Swaps to Sort
+
+Medium
+
+Minimize the Maximum Difference between the Heights
+
+Medium
+
+Find k largest elements in an array (Quick Sort Method)
+
+Medium
+
+3 Sum – Triplet Sum in Array
+
+Medium
+
+4 Sum - All Quadruples
+
+Medium
+
+Strings (14)
+
+First Repeated Character
+
+Easy
+
+Reverse Words
+
+Easy
+
+Roman Number to Integer
+
+Easy
+
+Check Anagram
+
+Easy
+
+Remove Duplicates
+
+Easy
+
+Longest Substring Without Repeating Characters
+
+Medium
+
+Rabin-Karp Algorithm
+
+Medium
+
+Z algorithm
+
+Medium
+
+Longest Palindromic Substring
+
+Medium
+
+Look-and-Say Sequence
+
+Medium
+
+Number to English Words
+
+Medium
+
+KMP Algorithm
+
+Hard
+
+Minimum Characters to Add at Front for Palindrome
+
+Hard
+
+Smallest Window Containing All Characters of Another String
+
+Hard
+
+Hashing (15)
+
+At least K Occurences
+
+Easy
+
+Common Elements in Two Arrays
+
+Easy
+
+Longest Subarray with 0 Sum
+
+Medium
+
+Count Distinct Elements In Every Window of Size K
+
+Medium
+
+4 Sum – Count Quadruplets with Given Sum
+
+Medium
+
+Check If Array Pair Sums Divisible by k
+
+Medium
+
+Longest Consecutive Subsequence
+
+Medium
+
+Count Subarrays having Sum K
+
+Medium
+
+Longest Subarray With Sum K
+
+Medium
+
+Longest Subarray With Sum Divisible By K
+
+Medium
+
+Sort according to an Array
+
+Medium
+
+Group Anagrams Together
+
+Medium
+
+Count Maximum Points on Same Line
+
+Hard
+
+LFU cache
+
+Hard
+
+Minimum Window Substring
+
+Hard
+
+Binary Search (10)
+
+Binary Search Algorithm
+
+Easy
+
+N-th root of a number
+
+Easy
+
+Single Element in a Sorted Array
+
+Medium
+
+Search in a Sorted and Rotated Array
+
+Medium
+
+Sum of Middle Elements of two Sorted Arrays
+
+Medium
+
+First and Last Occurrence
+
+Medium
+
+Median of two Sorted Arrays
+
+Hard
+
+Median in a Row-wise sorted Matrix
+
+Hard
+
+Allocate Minimum Pages
+
+Hard
+
+Aggressive Cows
+
+Hard
+
+Matrix (6)
+
+Find the row with maximum number of 1s
+
+Easy
+
+Rotate an Image 90 Degree Clockwise
+
+Medium
+
+Spirally traversing a matrix
+
+Medium
+
+Search in a Sorted Matrix
+
+Medium
+
+Set Matrix Rows and Columns to Zeroes
+
+Medium
+
+Max rectangle in Binary Matrix
+
+Hard
+
+Recursion and Backtracking (13)
+
+Find all Unique Subsets
+
+Medium
+
+Generate Sums of all Subsets
+
+Medium
+
+Tower of Hanoi
+
+Medium
+
+Generate all Unique Permutations
+
+Medium
+
+Rat in a Maze
+
+Medium
+
+Combination Sum (Repeated Selection)
+
+Medium
+
+Combination Sum II (Single Selection)
+
+Medium
+
+Generate all Palindromic Partitions
+
+Medium
+
+Generate Valid IP Addresses
+
+Medium
+
+Word Search
+
+Medium
+
+N-Queen Problem
+
+Hard
+
+Solve Sudoku
+
+Hard
+
+Word Break
+
+Hard
+
+Stack (10)
+
+Validate Parentheses
+
+Easy
+
+Implement two Stacks in an Array
+
+Medium
+
+The Stock Span Problem
+
+Medium
+
+Next Greater Element
+
+Medium
+
+Get Min from Stack
+
+Medium
+
+Evaluation of Postfix Expression
+
+Medium
+
+Longest Valid Parentheses Substring
+
+Medium
+
+Largest Rectangular Area in a Histogram
+
+Hard
+
+Maximum of Minimum for Every Window Size
+
+Hard
+
+Implement K Stacks in an Array
+
+Hard
+
+Queue (3)
+
+Moving Average from Data Stream
+
+Easy
+
+Design Circular Queue
+
+Medium
+
+Stream First Non-repeating
+
+Medium
+
+Deque (3)
+
+Maximum of all subarrays of size K
+
+Medium
+
+Longest Subarray with Absolute Difference Less than or Equal to K
+
+Medium
+
+Shortest Subarray with Sum at Least K
+
+Hard
+
+Stack + Queue (2)
+
+Stack using Queues
+
+Easy
+
+Queue using Stacks
+
+Easy
+
+Heap (10)
+
+Connect Ropes with Minimum Cost
+
+Easy
+
+Implement Binary Heap
+
+Medium
+
+Rearrange String to Avoid Adjacent Duplicates
+
+Medium
+
+Kth Largest Element
+
+Medium
+
+Merge k Sorted Arrays
+
+Medium
+
+Top K Frequent Elements
+
+Medium
+
+Merge K Sorted Linked Lists
+
+Medium
+
+Kth Smallest Element in Matrix
+
+Medium
+
+Sort a K Sorted Array
+
+Medium
+
+Find Median in Stream
+
+Hard
+
+Bit Manipulation (12)
+
+K-th Bit is Set or Not
+
+Easy
+
+Swap 2 Numbers using XOR
+
+Easy
+
+Check if a Number is a Power of 2
+
+Easy
+
+Rightmost Set Bit
+
+Easy
+
+Rightmost Different Bit
+
+Easy
+
+Toggle Bits in Given Range
+
+Easy
+
+Single in Couples
+
+Easy
+
+Division without *, /, or %
+
+Medium
+
+Count Set Bits from 1 to N
+
+Medium
+
+Generate Subsets using Bit Manipulation
+
+Medium
+
+Find Two Numbers with Odd Occurrences
+
+Medium
+
+Maximum Subset XOR
+
+Hard
+
+Linked List (16)
+
+Find Middle of the Linked List
+
+Easy
+
+Reverse a Linked List
+
+Easy
+
+Kth from End of Linked List
+
+Easy
+
+Pairwise Swap Elements of Linked List
+
+Easy
+
+Sort a linked list of 0s, 1s and 2s
+
+Medium
+
+Rotate a Linked List K times
+
+Medium
+
+Intersection in Y Shaped Lists
+
+Medium
+
+Detect Loop in Linked List
+
+Medium
+
+Remove loop in Linked List
+
+Medium
+
+Flattening a Linked List
+
+Medium
+
+Merge two Sorted Linked Lists
+
+Medium
+
+Add Two Numbers Represented as Linked List
+
+Medium
+
+Palindrome Linked List
+
+Medium
+
+Linked List Group Reverse
+
+Hard
+
+Clone a Linked List with Next and Random Pointer
+
+Hard
+
+LRU Cache
+
+Hard
+
+Binary Tree (19)
+
+Level Order Traversal in Spiral Form
+
+Easy
+
+Height of Binary Tree
+
+Easy
+
+Balanced Tree Check
+
+Easy
+
+Check Symmetric Tree
+
+Easy
+
+Check Identical Trees
+
+Easy
+
+Left View of Binary Tree
+
+Easy
+
+Top View of Binary Tree
+
+Medium
+
+Bottom View of Binary Tree
+
+Medium
+
+Diagonal Tree Traversal
+
+Medium
+
+Vertical Tree Traversal
+
+Medium
+
+LCA in Binary Tree
+
+Medium
+
+Tree Boundary Traversal
+
+Medium
+
+Diameter of a Binary Tree
+
+Medium
+
+Connect Nodes of Levels
+
+Medium
+
+Serialize and Deserialize a Binary Tree
+
+Medium
+
+Construct Tree from Inorder & Preorder
+
+Medium
+
+Maximum Path Sum between 2 Nodes
+
+Medium
+
+Max Path Sum between 2 Leaf Nodes
+
+Hard
+
+Convert Binary Tree to Doubly Linked List
+
+Hard
+
+Binary Search Tree (12)
+
+Check for BST
+
+Easy
+
+LCA in BST
+
+Easy
+
+Sorted Array to BST
+
+Easy
+
+Kth Largest Element in BST
+
+Easy
+
+Ceil in BST
+
+Medium
+
+Largest BST
+
+Medium
+
+Merge two BST 's
+
+Medium
+
+Preorder to BST
+
+Medium
+
+Predecessor and Successor in BST
+
+Medium
+
+Binary Search Tree Iterator
+
+Medium
+
+Delete a Node from BST
+
+Medium
+
+Balance a Binary Search Tree
+
+Medium
+
+Greedy (9)
+
+Minimize the Sum of Product
+
+Easy
+
+Largest Number Possible
+
+Easy
+
+Minimum Number of Coins
+
+Easy
+
+Assign Cookies
+
+Easy
+
+Gas Station
+
+Medium
+
+Activity Selection
+
+Medium
+
+Fractional Knapsack
+
+Medium
+
+Job Sequencing
+
+Medium
+
+Huffman Encoding
+
+Hard
+
+Dynamic Programming (21)
+
+Ways to Reach the Nth Stair
+
+Medium
+
+House Robber II
+
+Medium
+
+Coin Change (Minimum Coins)
+
+Medium
+
+Coin Change (Count Ways)
+
+Medium
+
+Longest Common Substring
+
+Medium
+
+Longest Increasing Subsequence
+
+Medium
+
+Longest Common Subsequence
+
+Medium
+
+0 - 1 Knapsack Problem
+
+Medium
+
+Partition Equal Subset Sum
+
+Medium
+
+Minimum Insertions to Form Palindrome
+
+Medium
+
+Maximize The Cut Segments
+
+Medium
+
+Maximum Path Sum in Matrix
+
+Medium
+
+Rod Cutting
+
+Medium
+
+Egg Dropping Puzzle
+
+Medium
+
+Word Break
+
+Medium
+
+Optimal Strategy For A Game
+
+Medium
+
+Wildcard Pattern Matching
+
+Medium
+
+Edit Distance
+
+Medium
+
+Matrix Chain Multiplication
+
+Hard
+
+Palindromic Partitioning
+
+Hard
+
+Boolean Parenthesization
+
+Hard
+
+Graph (32)
+
+DFS of Graph
+
+Easy
+
+BFS of Graph
+
+Easy
+
+Detect Cycle in Undirected Graph
+
+Medium
+
+Detect Cycle in a Directed Graph
+
+Medium
+
+Detect a Negative Cycle
+
+Medium
+
+Topological Sorting
+
+Medium
+
+Shortest Path in Directed Acyclic Graph
+
+Medium
+
+Kahn’s Algorithm
+
+Medium
+
+Dijkstra Algorithm
+
+Medium
+
+Bellman-Ford Algorithm
+
+Medium
+
+Floyd Warshall Algorithm
+
+Medium
+
+Prim’s Algorithm
+
+Medium
+
+Kruskal’s Algorithm
+
+Medium
+
+Euler Path and Circuit
+
+Medium
+
+Hamiltonian Path and Circuit
+
+Medium
+
+Kosaraju’s Algorithm
+
+Hard
+
+Tarjan’s Algorithm
+
+Hard
+
+Bridges in Graph
+
+Hard
+
+Articulation Points in Graph
+
+Hard
+
+Disjoint Set (Union Find Algorithm)
+
+Hard
+Mother Vertex
+
+Medium
+
+Rotten Oranges
+
+Medium
+
+Flood fill Algorithm
+
+Medium
+
+Replace O's with X's
+
+Medium
+
+Steps by Knight
+
+Medium
+
+Bipartite Graph
+
+Medium
+
+Number of Islands
+
+Medium
+
+Clone an Undirected Graph
+
+Medium
+
+M-Coloring Problem
+
+Medium
+
+Alien Dictionary
+
+Hard
+
+Circle of Strings
+
+Hard
+
+Minimum Cost Path
+
+Hard
+
+Trie (6)
+
+Insert, Search and Delete in Trie
+
+Medium
+
+Longest Common Prefix of Strings
+
+Medium
+
+Prefix Suffix String
+
+Medium
+
+Word Break (Trie)
+
+Hard
+
+Phone Directory
+
+Hard
+
+Maximum XOR Subarray
+
+Hard
