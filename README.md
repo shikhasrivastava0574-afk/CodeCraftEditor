@@ -2,6 +2,8 @@
 
 CodeCraft Editor is a stunning, Obsidian-themed personal practice room designed to prepare you for coding interviews and software engineering roles. It functions entirely client-side, using WebAssembly (WASM) to run code directly inside the user's browser with zero server configuration.
 
+🔗 **Live Deployment**: [code-craft-editor-ebon.vercel.app](https://code-craft-editor-ebon.vercel.app)
+
 ---
 
 ## 🚀 Key Features
